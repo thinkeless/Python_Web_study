@@ -62,3 +62,8 @@ def response_for_path(path):
     response = r.get(path, error)
     return response()
 ```
+##4.https
+```python
+import ssl
+s = ssl.wrap_socket(socket.socket())
+```
