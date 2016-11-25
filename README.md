@@ -1,4 +1,4 @@
-Python_Web_study 笔记
+#Python_Web_study 笔记
 ##1.log大法
 ```python
 def log(*args, **kwargs):
