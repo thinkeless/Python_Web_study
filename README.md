@@ -1,14 +1,14 @@
-#Python_Web_study 笔记
-##1.log大法
+# Python_Web_study 笔记
+## 1.log大法
 ```python
 def log(*args, **kwargs):
   print('log', *args, **kwargs)
 ```
-##2.request格式
+## 2.request格式
 ```python
 request = 'GET {} HTTP/1.1\r\nhost:{}\r\nCollection:close\r\n\r\n'.format(path, host)
 ```
-##3.server 接收 request, 并根据path 返回 response
+## 3.server 接收 request, 并根据path 返回 response
 ```python
 #使用with可以保证在程序中断的时候正确关闭socket并释放占用的端口
 with socket.socket() as s:
@@ -27,7 +27,7 @@ with socket.socket() as s:
                 log('error', e)
             connection.close()
 ```
-##4.response格式
+## 4.response格式
 ```python
 def error(code=404):
     e = {
@@ -62,7 +62,7 @@ def response_for_path(path):
     response = r.get(path, error)
     return response()
 ```
-##4.https
+## 4.https
 ```python
 import ssl
 s = ssl.wrap_socket(socket.socket())
